@@ -1,0 +1,6 @@
+*.dSYM
+*.o
+*.a
+.vscode
+.DS_Store
+zombie

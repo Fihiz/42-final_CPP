@@ -1,0 +1,34 @@
+
+ex00:
+
+// Writing my test like that would make some invisible trouble
+	//	try
+	//	{
+	//		Bureaucrat  lewis("Lewis", 1);
+	//		std::cout << lewis;
+	//		lewis.decGrade();
+	//		lewis.incGrade();
+	//	 	My lewis would be destroyed before to launch the error
+	//		lewis.decGrade();
+	//		std::cout << lewis;
+	//	}
+	//	catch(const std::exception &e)
+	//	{
+	//		std::cerr << e.what() << '\n';
+	//	}
+
+// An exception must be embed into a try and cath or an abort would occure !
+
+Helpful metaphor:
+
+[Try] is the fish, he's swimming as he's should be (as our program would be running)
+It was unexpected but the fisherman [throws] his fishing rod (as an error would occure while execution)
+The fish is catched
+
+main:
+	// john.signForm(oneForm);
+	// john.incGrade();
+	// braddy.incGrade();
+	// braddy.signForm(twoForm);
+	// std::cout << twoForm;
+	// braddy.signForm(twoForm);
