@@ -166,6 +166,6 @@ List of standard exceptions
 
 ```Helpful metaphor:
 
-[Try] is the fish, he's swimming as he's should be (as our program would be running)
+[Try] is the fish, he's swimming as he should be (as our program would be running)
 It was unexpected but the fisherman [throws] his fishing rod (as an error would occure while execution)
 The fish is catched```
