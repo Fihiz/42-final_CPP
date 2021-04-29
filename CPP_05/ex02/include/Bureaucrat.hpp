@@ -6,7 +6,7 @@
 /*   By: salome <salome@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/11 18:35:51 by sad-aude          #+#    #+#             */
-/*   Updated: 2021/04/14 11:49:03 by salome           ###   ########lyon.fr   */
+/*   Updated: 2021/04/14 18:19:10 by salome           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,10 @@
 #include <iostream>
 #include <stdexcept>
 
+class Bureaucrat;
+
+#include "AForm.hpp"
+
 class Bureaucrat
 {
     private:
@@ -47,7 +51,7 @@ class Bureaucrat
 		Bureaucrat &operator=( Bureaucrat const &rhs );			// Assignation operator overload
         ~Bureaucrat( void );									// Destructor
 		
-		// Nested classes for exception handling (must not be coplien)
+		// Nested class for exception handling (must not be coplien)
 		class	GradeTooHighException : public std::exception
 		{
 			public:
@@ -64,16 +68,13 @@ class Bureaucrat
     int               getGrade( void ) const;
 
     // Methods
-    void               decGrade( void ); //(++)
-    void               incGrade( void ); //(--)
+    void              	decGrade( void ); //(++)
+    void               	incGrade( void ); //(--)
+	void				signForm( AForm &form ) const;
+	void				executeForm( AForm const &form ) const;
 };
 
 // Bureaucrat output stream overload
 std::ostream &operator<<( std::ostream &o, const Bureaucrat &rhs );
-
-///* An overloaded operator takes one or two arguments and if the operator is a member to a class 
-//** then it takes one less argument, because the first argument of the operator function is 
-//** implicitly bound to the object that calls the operator. If you do not want this behavior then 
-//** you can declare an operator overloading function as a non-member function or as a friend function. */
 
 #endif

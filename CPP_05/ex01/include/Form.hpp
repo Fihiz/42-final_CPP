@@ -6,7 +6,7 @@
 /*   By: salome <salome@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/12 23:30:38 by salome            #+#    #+#             */
-/*   Updated: 2021/04/13 01:29:19 by salome           ###   ########lyon.fr   */
+/*   Updated: 2021/04/14 11:48:50 by salome           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ class Form
 		Form &operator=( Form const &rhs );												// Assignation operator overload
         ~Form( void );																	// Destructor
 		
-		// Nested class for exception handling (must not be coplien)
+		// Nested classes for exception handling (must not be coplien)
 		class	GradeTooHighException : public std::exception
 		{
 			public:

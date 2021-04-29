@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sad-aude <sad-aude@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: salome <salome@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/11 18:35:48 by sad-aude          #+#    #+#             */
-/*   Updated: 2021/04/13 13:55:43 by sad-aude         ###   ########lyon.fr   */
+/*   Updated: 2021/04/14 21:10:17 by salome           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ void              Bureaucrat::incGrade( void ) //(--)
 	return ;
 }
 
-void				Bureaucrat::signForm( Form &form ) const
+void				Bureaucrat::signForm( AForm &form ) const
 {
 	try
 	{
@@ -90,11 +90,31 @@ void				Bureaucrat::signForm( Form &form ) const
 		std::cout << T_GY "< " << T_BB << getName() << T_GY " > signs < ";
 		std::cout << T_BB << form.getName() << T_GYB " >" << T_N << std::endl;
 	}
-	catch(Form::GradeTooLowException &e)
+	catch(AForm::GradeTooLowException &e)
 	{
 		std::cerr << e.what() << '\n';
 	}
-	catch(Form::AlreadySignedException &e)
+	catch(AForm::AlreadySignedException &e)
+	{
+		std::cerr << e.what() << '\n';
+	}
+	
+	return ;
+}
+
+void				Bureaucrat::executeForm( AForm const &form ) const
+{
+	try
+	{
+		form.execute(*this);
+		std::cout << T_GY "< " << T_BB << getName() << T_GY " > executes < ";
+		std::cout << T_BB << form.getName() << T_GYB " >" << T_N << std::endl;
+	}
+	catch(AForm::GradeTooLowException &e)
+	{
+		std::cerr << e.what() << '\n';
+	}
+	catch(AForm::NotSignedYetException &e)
 	{
 		std::cerr << e.what() << '\n';
 	}

@@ -6,7 +6,7 @@
 /*   By: salome <salome@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/11 18:35:51 by sad-aude          #+#    #+#             */
-/*   Updated: 2021/04/13 01:32:10 by salome           ###   ########lyon.fr   */
+/*   Updated: 2021/04/14 11:48:44 by salome           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ class Bureaucrat
 		Bureaucrat &operator=( Bureaucrat const &rhs );			// Assignation operator overload
         ~Bureaucrat( void );									// Destructor
 		
-		// Nested class for exception handling (must not be coplien)
+		// Nested classes for exception handling (must not be coplien)
 		class	GradeTooHighException : public std::exception
 		{
 			public:

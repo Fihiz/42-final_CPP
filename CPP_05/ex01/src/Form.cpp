@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Form.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: salome <salome@student.42lyon.fr>          +#+  +:+       +#+        */
+/*   By: sad-aude <sad-aude@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/12 23:50:31 by salome            #+#    #+#             */
-/*   Updated: 2021/04/13 02:15:51 by salome           ###   ########lyon.fr   */
+/*   Updated: 2021/04/13 13:54:34 by sad-aude         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,13 +71,6 @@ int               Form::getSignedStatus( void ) const
 }
 
 // METHODS
-
-//int               Form::isSigned( void ) const
-//{
-//	if (!getSignedStatus())
-//		return (NO);
-//	return (YES);
-//}
 
 void			Form::beSigned( Bureaucrat const &bureaucrat )
 {
