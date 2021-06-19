@@ -45,7 +45,7 @@ int     main(void)
 
 ## To understand the [class and instance](https://www.geeksforgeeks.org/c-classes-and-objects/).
 
-*A Class could be compared to an architect plan for a home. Before to be able to build it, we must have a plan. It is the same for an object, we need to create its plan, and then we can build as objects as we want to from its class. Or a cake mold ! And do as cakes as we want to, our __instances__...* \
+*A Class could be compared to an architect plan for a home. Before to be able to build it, we must have a plan. It is the same for an object, we need to create its plan, and then we can build as objects as we want to from its class. Or a cake mold ! And do as cakes as we want to, our __instances__...*  
 >__Class :__ *A class in C++ is the building block, that leads to Object-Oriented programming. It is a user-defined data type, which holds its own data members and member functions, which can be accessed and used by creating an instance of that class. A C++ class is like a blueprint for an object.*
 
 ---
